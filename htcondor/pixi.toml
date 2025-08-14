@@ -1,0 +1,10 @@
+[workspace]
+authors = ["Shekar V <vshekar1@bnl.gov>"]
+channels = ["conda-forge"]
+name = "htcondor"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
