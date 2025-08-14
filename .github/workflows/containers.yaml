@@ -88,7 +88,7 @@ jobs:
           file: htcondor/Dockerfile
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-     [<35;21;6M[<35;23;8M     pull: true
+          pull: true
           push: ${{ github.event_name != 'pull_request' }}
 
   apptainer:
@@ -118,7 +118,7 @@ jobs:
             SHA=$(git rev-parse --short HEAD)
             echo "sha=sha-$SHA" >> $GITHUB_OUTPUT
 
-      - name: Install A[<35;25;9Mpptainer
+      - name: Install Apptainer
         uses: eWaterCycle/setup-apptainer@v2
 
       - name: Build container from definition file
