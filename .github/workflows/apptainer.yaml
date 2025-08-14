@@ -79,4 +79,5 @@ jobs:
         working-directory: ./cuda-exercise
         run: |
             apptainer push gpu-noble-cuda-12.9.sif oras://ghcr.io/${{ github.repository }}:apptainer-gpu-noble-cuda-12.9
+            sleep 1
             apptainer push gpu-noble-cuda-12.9.sif oras://ghcr.io/${{ github.repository }}:apptainer-gpu-noble-cuda-12.9-${{ steps.meta.outputs.sha }}
